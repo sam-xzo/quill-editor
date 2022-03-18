@@ -13,7 +13,7 @@ export class QuillComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  module = {
+  contentConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
       ['blockquote', 'code-block'],
