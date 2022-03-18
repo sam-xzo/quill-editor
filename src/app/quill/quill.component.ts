@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Quill from 'quill';
 
 @Component({
   selector: 'app-quill',
@@ -19,9 +20,9 @@ export class QuillComponent implements OnInit {
       ['blockquote', 'code-block'],
 
       [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-      [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+      [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
+      [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
       [{ 'direction': 'rtl' }],                         // text direction
 
       [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
@@ -37,4 +38,20 @@ export class QuillComponent implements OnInit {
     ]
   };
 
+  snow = new Quill('#snow-container', {
+    theme: 'snow',
+    modules: {
+      table: true,
+    }
+  });
+
+  // table = this.snow.getModule('table');
+
+
+
+  customButton() {
+    console.log("clicked");
+    // this.table.insertTable(2, 2);
+
+  }
 }
