@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { QuillModule } from 'ngx-quill';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuillComponent } from './quill/quill.component';
@@ -13,7 +13,7 @@ import { QuillComponent } from './quill/quill.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    QuillModule.forRoot()
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

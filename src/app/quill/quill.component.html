@@ -1,26 +1,2 @@
-<p>quill works!</p>
-<quill-editor id="snow-container">
-  <div quill-editor-toolbar>
-    <span class="ql-formats">
-      <button class="ql-bold" [title]="'Bold'"></button>
-    </span>
-    <span class="ql-formats">
-      <select class="ql-align" [title]="'Aligment'">
-        <option selected></option>
-        <option value="center"></option>
-        <option value="right"></option>
-        <option value="justify"></option>
-      </select>
-      <select class="ql-align" [title]="'Aligment2'">
-        <option selected></option>
-        <option value="center"></option>
-        <option value="right"></option>
-        <option value="justify"></option>
-      </select>
-
-    </span>
-    <span class="ql-formats">
-      <button class="ql-bold" (click)="customButton()"></button>
-    </span>
-  </div>
-</quill-editor>
+<h1>Rich text editor works</h1>
+<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>

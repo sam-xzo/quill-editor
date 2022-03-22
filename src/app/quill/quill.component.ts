@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import Quill from 'quill';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 @Component({
   selector: 'app-quill',
@@ -8,50 +9,14 @@ import Quill from 'quill';
 })
 export class QuillComponent implements OnInit {
 
+  public Editor = ClassicEditor;
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
-  contentConfig = {
-    toolbar: [
-      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-      ['blockquote', 'code-block'],
-
-      [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-      [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-      [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-      [{ 'direction': 'rtl' }],                         // text direction
-
-      [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-      [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-      [{ 'font': [] }],
-      [{ 'align': [] }],
-
-      ['clean'],                                         // remove formatting button
-
-      ['link', 'image', 'video']                         // link and image, video
-    ]
-  };
-
-  snow = new Quill('#snow-container', {
-    theme: 'snow',
-    modules: {
-      table: true,
-    }
-  });
-
-  // table = this.snow.getModule('table');
 
 
-
-  customButton() {
-    console.log("clicked");
-    // this.table.insertTable(2, 2);
-
-  }
 }
